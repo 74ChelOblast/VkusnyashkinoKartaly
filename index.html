@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffaf3">
+  <meta name="description" content="Вкусняшкино, Карталы. Зефирные тюльпаны, букеты, пряники и швейцарская меренга ручной работы. Каталог и связь в MAX.">
+  <title>Вкусняшкино — зефир и сладости ручной работы · Карталы</title>
+  <link rel="preload" href="assets/fonts/Nunito.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/Comfortaa.ttf" as="font" type="font/ttf" crossorigin>
+
+  <link rel="stylesheet" href="styles.css?v=mobile-ready-12">
+  <script src="app.js?v=mobile-ready-12" defer></script>
+</head>
+<body>
+  <div class="season-note"><span aria-hidden="true">❄</span> Готовимся к Новому году <span aria-hidden="true">❄</span></div>
+  <header class="header wrap">
+    <a class="brand" href="#" aria-label="Вкусняшкино — на главную">Вкусняшкино</a>
+    <nav aria-label="Основная навигация"><a href="#catalog">Каталог</a><a href="#about">О мастерской</a><a href="#contacts">Контакты</a></nav>
+    <a class="header-contact" href="https://max.ru/u/f9LHodD0cOJUh0Jmr6kpfaH3ecb83xbiavTaMFssCOWywJT2uvCw__2J7FE" target="_blank" rel="noopener noreferrer">Написать в MAX <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Карталы · ручная работа · к Новому году</p>
+        <h1 id="hero-title">Зефирные букеты<br>и сладости<br>ручной работы</h1>
+        <p class="hero-description">Воздушный зефир, ароматные пряники и швейцарская меренга. Здесь можно посмотреть ассортимент и связаться с нами.</p>
+        <a class="button" href="#catalog">Смотреть каталог <span aria-hidden="true">↓</span></a>
+        <p class="hero-caption">Вкусняшкино · натуральные продукты</p>
+      </div>
+      <figure class="hero-art"><img src="assets/business-card-new-year.png" width="1536" height="1024" alt="Новогодняя визитка Вкусняшкино с еловыми ветками, зефиром и пряниками"><figcaption>Новогодняя визитка «Вкусняшкино»</figcaption></figure>
+    </section>
+    <section class="catalog wrap" id="catalog" aria-labelledby="catalog-title">
+      <div class="section-heading"><div><h2 id="catalog-title">Что мы делаем</h2><p>Букеты, цветочные композиции и сладости.</p></div><span class="catalog-city">Карталы, Россия</span></div>
+      <div class="filters" role="group" aria-label="Категории каталога">
+        <button type="button" class="filter active" data-filter="all" aria-pressed="true">Весь каталог</button>
+        <button type="button" class="filter" data-filter="zephyr" aria-pressed="false">Зефир</button>
+        <button type="button" class="filter" data-filter="bouquet" aria-pressed="false">Букеты</button>
+        <button type="button" class="filter" data-filter="basket" aria-pressed="false">Корзинки</button>
+        <button type="button" class="filter" data-filter="gingerbread" aria-pressed="false">Пряники</button>
+        <button type="button" class="filter" data-filter="meringue" aria-pressed="false">Меренга</button>
+        <button type="button" class="filter" data-filter="holiday" aria-pressed="false">Новогоднее</button>
+        <button type="button" class="filter" data-filter="easter" aria-pressed="false">Пасха</button>
+        <button type="button" class="filter" data-filter="school" aria-pressed="false">К школе</button>
+        <button type="button" class="filter" data-filter="colouring" aria-pressed="false">Пряники-раскраски</button>
+      </div>
+      <div class="catalog-controls" role="group" aria-label="Поиск, цена и порядок товаров">
+        <div class="catalog-search"><label for="catalog-search">Поиск по каталогу</label><div class="search-field"><input id="catalog-search" type="search" placeholder="Например: тюльпаны, пряники, зайчик" autocomplete="off" aria-controls="products"><button id="clear-search" class="clear-search" type="button" hidden>Очистить поиск</button></div></div>
+        <div class="price-range"><span>Цена, ₽</span><label for="price-min">От<input id="price-min" type="number" min="0" step="1" inputmode="numeric" placeholder="100"></label><label for="price-max">До<input id="price-max" type="number" min="0" step="1" inputmode="numeric" placeholder="3 500"></label></div>
+        <label class="sort-control" for="price-sort">Порядок<select id="price-sort"><option value="default">Как в каталоге</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option></select></label>
+        <button id="reset-filters" class="reset-filters" type="button">Сбросить фильтры</button>
+      </div>
+      <p class="catalog-note">В карточках указаны начальные цены. Стоимость зависит от размера, сложности цветка и оформления. Фильтр учитывает начальную цену. Нажмите на фотографию, чтобы рассмотреть работу поближе.</p>
+      <p class="catalog-status" id="filter-status" role="status" aria-live="polite"></p>
+      <div class="product-grid" id="products"></div>
+      <p class="catalog-empty" id="catalog-empty" hidden>По этим условиям ничего не найдено. Измените запрос, цену или сбросьте фильтры.</p>
+    </section>
+    <section class="about wrap" id="about" aria-labelledby="about-title">
+      <div><p class="eyebrow">О мастерской</p><h2 id="about-title">Вкусняшкино</h2></div><div class="about-copy"><p>Готовим зефир, пряники и швейцарскую меренгу вручную, из натуральных продуктов. Мы в Карталах.</p><p>Если хотите узнать о конкретной работе, составе или цене, напишите в MAX.</p></div>
+    </section>
+    <section class="contacts wrap" id="contacts" aria-labelledby="contact-title"><div><h2 id="contact-title">Есть вопрос? Напишите нам</h2><p>О составе, вариантах оформления и ценах.</p></div><div class="contact-links"><a class="button" href="https://max.ru/u/f9LHodD0cOJUh0Jmr6kpfaH3ecb83xbiavTaMFssCOWywJT2uvCw__2J7FE" target="_blank" rel="noopener noreferrer">MAX <span aria-hidden="true">↗</span></a><a class="button button-vk" href="https://vk.ru/id614800130" target="_blank" rel="noopener noreferrer">ВКонтакте <span aria-hidden="true">↗</span></a><a class="phone" href="tel:+79514697342">+7 (951) 469-73-42</a></div></section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="#">Вкусняшкино</a><span>Сладости ручной работы · Карталы</span><a href="#catalog">К каталогу ↑</a></footer>
+  <dialog id="product-dialog" aria-labelledby="dialog-title"><button class="close-dialog" type="button" aria-label="Закрыть описание">×</button><div id="dialog-art"></div><div class="dialog-copy"><p class="eyebrow">Вкусняшкино · Карталы</p><h2 id="dialog-title"></h2><p id="dialog-description"></p><p class="dialog-price" id="dialog-price"></p><p class="dialog-note" id="dialog-price-note"></p><a class="button" href="https://max.ru/u/f9LHodD0cOJUh0Jmr6kpfaH3ecb83xbiavTaMFssCOWywJT2uvCw__2J7FE" target="_blank" rel="noopener noreferrer">Написать в MAX ↗</a><a class="dialog-vk" href="https://vk.ru/id614800130" target="_blank" rel="noopener noreferrer">Написать ВКонтакте ↗</a></div></dialog>
+</body>
+</html>
