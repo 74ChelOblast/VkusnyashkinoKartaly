@@ -1456,6 +1456,21 @@ const products = [
       "assets/catalog/spring-36.webp"
     ],
     "priceFrom": 2000
+  },
+  {
+    "id": "christmas-lamb",
+    "filters": [
+      "gingerbread",
+      "holiday"
+    ],
+    "title": "Пряничная композиция с овечкой",
+    "category": "Пряники ручной работы",
+    "description": "Новогодняя овечка с ёлочкой и подарком на пряничной подставке. На фотографиях — композиция без упаковки и в подарочной коробке с красной лентой.",
+    "images": [
+      "assets/catalog/lamb-1.webp",
+      "assets/catalog/lamb-2.webp"
+    ],
+    "priceFrom": 500
   }
 ];
 const priceNote='Стоимость зависит от размера, сложности цветка и оформления.';
